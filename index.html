@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Affirma Pong</title>  <script type="module" crossorigin src="./assets/main-BTgfUOuB.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/childCommunication-DNz5EZLB.js">
+  <link rel="stylesheet" crossorigin href="./assets/childCommunication-Cfdtq1eV.css">
+</head>
+<body>
+<header>
+  <h1>Affirma Pong</h1>
+  <div class="hdr-right"><span id="me" class="muted">Connecting…</span><span id="role" class="pill" hidden title="Your browser is currently coordinating the lobby">host</span></div>
+</header>
+<main class="layout">
+  <section class="content">
+    <!-- LOBBY -->
+    <div id="lobby">
+      <div id="tables" class="tables"></div>
+      <div class="row">
+        <div class="card grow">
+          <div class="card-h"><h2>Queue</h2><button id="queueBtn" class="primary">Join queue</button></div>
+          <ol id="queue" class="list"></ol>
+        </div>
+        <div class="card grow">
+          <h2>Today's leaderboard <span class="muted small">(matches)</span></h2>
+          <table class="board"><thead><tr><th>#</th><th>Player</th><th>Wins</th><th>Losses</th></tr></thead><tbody id="board"></tbody></table>
+        </div>
+        <div class="card">
+          <h2>Here now</h2><ul id="people" class="list"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- TABLE -->
+    <div id="table" hidden>
+      <div class="table-bar">
+        <button id="backBtn">← Lobby</button>
+        <div id="scoreline" class="scoreline"></div>
+        <div><button id="forfeitBtn" class="danger" hidden>Forfeit</button></div>
+      </div>
+      <div class="court-wrap">
+        <canvas id="court" width="800" height="500"></canvas>
+        <div id="overlay" class="overlay" hidden></div>
+      </div>
+      <p class="muted small">Mouse over the court, or ↑/↓ (W/S), to move your paddle.</p>
+    </div>
+  </section>
+  <aside class="chat card">
+    <h2>Chat</h2>
+    <div id="chatLog" class="chat-log"></div>
+    <form id="chatForm" class="chat-form"><input id="chatInput" maxlength="300" placeholder="Say something…" autocomplete="off"><button>Send</button></form>
+  </aside>
+</main>
+<div id="error" class="error" hidden></div>
+</body></html>
